@@ -849,11 +849,12 @@ ARM Macro Assembler    Page 13
 ARM Macro Assembler    Page 14 
 
 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\stm322
-xg-eval\startup_stm32f2xx.d -o.\stm322xg-eval\startup_stm32f2xx.o -IC:\Keil\ARM
-\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\ST\STM32F2xx --predefin
-e="__MICROLIB SETA 1" --list=.\stm322xg-eval\startup_stm32f2xx.lst ..\..\..\..\
-Libraries\CMSIS\Device\ST\STM32F2xx\Source\Templates\arm\startup_stm32f2xx.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\stm322xg-eval\startup_stm32f2xx.d -o.\stm322xg-eval\startup_stm3
+2f2xx.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\INC\ST\STM32F2xx --predefine
+="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 538" --list=.\stm322xg
+-eval\startup_stm32f2xx.lst ..\..\..\..\Libraries\CMSIS\Device\ST\STM32F2xx\Sou
+rce\Templates\arm\startup_stm32f2xx.s
 
 
 
@@ -2265,4 +2266,4 @@ e\Templates\arm\startup_stm32f2xx.s
 e\Templates\arm\startup_stm32f2xx.s
 Comment: __main used once
 2 symbols
-441 symbols in table
+442 symbols in table
