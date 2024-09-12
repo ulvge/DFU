@@ -1,0 +1,57 @@
+*** Creating Trace Output File '.\STM322xG-EVAL\STM322xG-EVAL_FS.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\stm322xg-eval\stm32fxxx_it.o"'
+### List of Objects: adding '".\stm322xg-eval\usb_bsp.o"'
+### List of Objects: adding '".\stm322xg-eval\misc.o"'
+### List of Objects: adding '".\stm322xg-eval\main.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_usr.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_stdreq.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_core.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_hcs.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_ioreq.o"'
+### List of Objects: adding '".\stm322xg-eval\usb_hcd_int.o"'
+### List of Objects: adding '".\stm322xg-eval\usb_core.o"'
+### List of Objects: adding '".\stm322xg-eval\usb_hcd.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_msc_scsi.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_msc_bot.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_msc_core.o"'
+### List of Objects: adding '".\stm322xg-eval\usbh_msc_fatfs.o"'
+### List of Objects: adding '".\stm322xg-eval\ff.o"'
+### List of Objects: adding '".\stm322xg-eval\fattime.o"'
+### List of Objects: adding '".\stm322xg-eval\lcd_log.o"'
+### List of Objects: adding '".\stm322xg-eval\startup_stm32f2xx.o"'
+### List of Objects: adding '".\stm322xg-eval\system_stm32f2xx.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_syscfg.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_dma.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_exti.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_flash.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_fsmc.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_gpio.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_i2c.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_pwr.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_rcc.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_spi.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_usart.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_tim.o"'
+### List of Objects: adding '".\stm322xg-eval\stm32f2xx_sdio.o"'
+### List of Objects: adding '".\stm322xg-eval\stm322xg_eval_sdio_sd.o"'
+### List of Objects: adding '".\stm322xg-eval\stm322xg_eval.o"'
+### List of Objects: adding '".\stm322xg-eval\stm322xg_eval_ioe.o"'
+### List of Objects: adding '".\stm322xg-eval\stm322xg_eval_lcd.o"'
+### List of Objects: adding '".\stm322xg-eval\xprintf.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\stm322xg-eval\stm32fxxx_it.o" ".\stm322xg-eval\usb_bsp.o" ".\stm322xg-eval\misc.o" ".\stm322xg-eval\main.o" ".\stm322xg-eval\usbh_usr.o" ".\stm322xg-eval\usbh_stdreq.o" ".\stm322xg-eval\usbh_core.o" ".\stm322xg-eval\usbh_hcs.o" ".\stm322xg-eval\usbh_ioreq.o" ".\stm322xg-eval\usb_hcd_int.o" ".\stm322xg-eval\usb_core.o" ".\stm322xg-eval\usb_hcd.o" ".\stm322xg-eval\usbh_msc_scsi.o" ".\stm322xg-eval\usbh_msc_bot.o" ".\stm322xg-eval\usbh_msc_core.o" ".\stm322xg-eval\usbh_msc_fatfs.o" ".\stm322xg-eval\ff.o" ".\stm322xg-eval\fattime.o" ".\stm322xg-eval\lcd_log.o" ".\stm322xg-eval\startup_stm32f2xx.o" ".\stm322xg-eval\system_stm32f2xx.o" ".\stm322xg-eval\stm32f2xx_syscfg.o" ".\stm322xg-eval\stm32f2xx_dma.o" ".\stm322xg-eval\stm32f2xx_exti.o" ".\stm322xg-eval\stm32f2xx_flash.o" ".\stm322xg-eval\stm32f2xx_fsmc.o" ".\stm322xg-eval\stm32f2xx_gpio.o" ".\stm322xg-eval\stm32f2xx_i2c.o" ".\stm322xg-eval\stm32f2xx_pwr.o" ".\stm322xg-eval\stm32f2xx_rcc.o" ".\stm322xg-eval\stm32f2xx_spi.o" ".\stm322xg-eval\stm32f2xx_usart.o" ".\stm322xg-eval\stm32f2xx_tim.o" ".\stm322xg-eval\stm32f2xx_sdio.o" ".\stm322xg-eval\stm322xg_eval_sdio_sd.o" ".\stm322xg-eval\stm322xg_eval.o" ".\stm322xg-eval\stm322xg_eval_ioe.o" ".\stm322xg-eval\stm322xg_eval_lcd.o" ".\stm322xg-eval\xprintf.o" --library_type=microlib --strict --scatter ".\STM322xG-EVAL\STM322xG-EVAL_FS.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\STM322xG-EVAL\STM322xG-EVAL_FS.map" -o ".\STM322xG-EVAL\STM322xG-EVAL_FS.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\STM322xG-EVAL\STM322xG-EVAL_FS.axf'
+### ADS-LD Command File: '.\STM322xG-EVAL\STM322xG-EVAL_FS.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\STM322xG-EVAL\STM322xG-EVAL_FS.lnp', Handle=0x00000580
+### Writing '.lnp' file
+### ADS-LD Command file '.\STM322xG-EVAL\STM322xG-EVAL_FS.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

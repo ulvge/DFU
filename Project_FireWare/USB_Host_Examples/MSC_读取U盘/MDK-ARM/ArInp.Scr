@@ -1,0 +1,2 @@
+--create .\STM322xG-EVAL\STM322xG-EVAL_FS.lib
+.\stm322xg-eval\usbh_fireware.o

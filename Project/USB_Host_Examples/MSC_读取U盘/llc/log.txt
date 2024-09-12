@@ -1,0 +1,135 @@
+
+****************************************************************************************
+ucos
+LwIP
+usb 
+api
+linux
+
+867994024895928
+
+
+****************************************************************************************
+->
+
+LLC_ModuleInit->LLC_Setup->LLC_DeviceSetup->LLC_USBSetup->
+                                            LLC_USBSetup->LLC_USBDelayedSetupCallback->LLC_USBDelayedSetup
+
+                                            LLC_FirmwareSetup
+                                            LLC_NetDevSetup
+                                            LLC_MonitorSetup
+                                            LLC_ListSetup
+                                            LLC_ThreadSetup
+                                            LLC_MsgSetup
+                                            LLC_USBSetup
+
+
+LLC_USBSetup->LLC_USBDelayedSetupCallback->LLC_USBDelayedSetup(赋值)->LLC_USBInterfaceProbe->LLC_USBPeriodicWorkCallback
+        ->LLC_USBInSubmit(发送In请求)->
+        LLC_USBInUrbCallback(收到后，判断请求)->
+        LLC_USBInWorkCallback(注册后，周期性工作队列)->LLC_MsgRecv(消息处理)->
+            usb_free_urb(一个In事务周期完成)->LLC_USBInSubmit(发送In请求 Next)->
+            
+            
+
+本周工作内容：熟悉了Linux的部分逻辑架构和解决方式。
+下周工作内容：熟悉linux平台，熟悉并理解LLC代码功能
+
+
+->
+
+
+LLC_ModuleInit->LLC_Setup->MKx_Init->LLC_Start//注册了很多配置、功能函数
+    LLC_Config->LLC_MsgCfgReq
+                                ->LLC_USBOutReq(usb_fill_bulk_urb)
+                                ->LLC_USBOutReqSubmit
+                                ->LLC_USBOutReqBulkCallback
+                                
+                                ->LLC_USBOutReqWorkCallback->LLC_USBOutSubmitNext
+                                                            
+                                
+
+
+
+
+
+
+添删查改
+
+
+
+
+
+
+
+LLC_Config->LLC_MsgCfgReq->LLC_USBOutReq->usb_fill_bulk_urb(LLC_USBOutReqBulkCallback)->
+
+Demo_Process->USBH_Process(&USB_OTG_Core, &USB_Host)->
+CohdaMobility
+
+****************************************************************************************
+
+
+  pMKx->API.Functions.Config    	= LLC_Config;
+  
+  
+  
+  
+  
+
+    Res = register_netdev(pNetDev);
+    
+static const struct net_device_ops LLCNetDevOps =
+
+
+****************************************************************************************
+
+    
+
+Test_SetUp->MKx_Init->LLC_Start->LLC_Device
+
+
+LLC_ModuleInit->LLC_Setup->LLC_DeviceSetup->LLC_USBSetup->
+                                            LLC_USBSetup->LLC_USBDelayedSetupCallback->LLC_USBDelayedSetup
+
+LLC_ModuleInit->LLC_Setup->MKx_Init->
+
+
+
+Demo_Process->USBH_Process(&USB_OTG_Core, &USB_Host)->
+CohdaMobility
+
+
+
+
+****************************************************************************************
+The MK5 Carrier Board is designed to be flexible enough to work in any of the following
+configurations:
+On-board unit (OBU) in a vehicle, running DSRC applications
+? Roadside unit (RSU), in a DSRC system environment
+****************************************************************************************
+
+USB 通讯的最基本形式是通过某些称为 端点 的. 一个 USB 端点只能在一个方向承载数据, 或者从主机到设备(称为输出端点)或者
+从设备到主机(称为输入端点). 端点可看作一个单向的管道.
+
+一个 USB 端点可是 4 种不同类型的一种, 它来描述数据如何被传送:
+
+CONTROL
+控制端点被用来允许对 USB 设备的不同部分存取. 通常用作配置设备, 获取关于设备的信息, 发送命令到设备, 
+或者获取关于设备的状态报告. 这些端点在尺寸上常常较小. 每个 USB 设备有一个控制端点称为"端点 0", 
+被 USB 核用来在插入时配置设备. 这些传送由 USB 协议保证来总有足够的带宽使它到达设备.
+
+INTERRUPT
+中断端点传送小量的数据, 以固定的速率在每次 USB 主请求设备数据时. 这些端点对 USB 键盘和鼠标来说是主要的传送方法.
+ 它们还用来传送数据到 USB 设备来控制设备, 但通常不用来传送大量数据. 这些传送由 USB 协议保证来总有足够的带宽使它到达设备.
+
+BULK
+块端点传送大量的数据. 这些端点常常比中断端点大(它们一次可持有更多的字符). 它们是普遍的, 对于需要传送不能有任何数据丢失的数据.
+这些传送不被 USB 协议保证来一直使它在特定时间范围内完成. 如果总线上没有足够的空间来发送整个 BULK 报文, 它被分为多次传送到或者从设备. 这些端点普遍在打印机, 存储器, 和网络设备上.
+
+ISOCHRONOUS
+同步端点也传送大量数据, 但是这个数据常常不被保证它完成. 这些端点用在可以处理数据丢失的设备中, 并且更多依赖于保持持续的数据流.
+ 实时数据收集, 例如音频和视频设备, 一直都使用这些端点.
+****************************************************************************************
+
+

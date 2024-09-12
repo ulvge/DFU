@@ -1,0 +1,9 @@
+--cpu Cortex-M3
+".\stm322xg-eval\startup_stm32f2xx.o"
+".\stm322xg-eval\system_stm32f2xx.o"
+".\stm322xg-eval\main.o"
+".\stm322xg-eval\usbh_fireware.o"
+--library_type=microlib --strict --scatter ".\STM322xG-EVAL\STM322xG-EVAL_FS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\STM322xG-EVAL\STM322xG-EVAL_FS.map" -o .\STM322xG-EVAL\STM322xG-EVAL_FS.axf
